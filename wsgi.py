@@ -22,7 +22,7 @@ if not (host and user and password):
 @application.route('/')
 def index():
     print(1)
-    return render_template("index.html", host=host, user=user)
+    return render_template("index.html", host=host, user=user, oss_bucket_name=oss_bucket_name)
 
 
 if __name__ == '__main__':
