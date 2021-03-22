@@ -8,13 +8,13 @@ import sys
 
 application = Flask(__name__)
 
-host = os.getenv("DB_HOST")
-user = os.getenv("DB_USER")
+host = os.getenv("endpoint")
+user = os.getenv("username")
 password = os.getenv("DB_PASSWORD")
 
 oss_bucket_name = os.getenv("BUCKET_NAME")
 
-if not (host and user and password):
+if not (host and user):
     print('Could NOT retrieve DB information from environment variables. Exiting...')
     sys.exit(-1)
 
